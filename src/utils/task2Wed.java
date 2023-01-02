@@ -24,6 +24,8 @@ public class task2Wed {
         System.out.println("divisible by 5:"+ div5);
         System.out.println("divisible by 3:"+ div3);
 
+        //task
+
 
 
 
