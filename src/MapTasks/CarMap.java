@@ -1,6 +1,7 @@
 package MapTasks;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class CarMap {
 
@@ -88,8 +89,8 @@ public class CarMap {
  */
 
 
-        // 4.2 Display the brand-model-price of each car
-        // Im still strugling with this task
+        System.out.println("------------Display the brand-model-price of each car-------------");
+        // Im still struggling with this task
 
         for (Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet()) {
 
@@ -102,8 +103,38 @@ public class CarMap {
                 }
             }
             System.out.println(result);
-
         }
+
+        System.out.println("----------Display all the electric cars--------------");
+
+        for (Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet()) {
+            for (Map.Entry<String, Object> each : eachEntry.getValue().entrySet()) {
+                if(each.getKey().equals("electric")){
+                    if ((Boolean) each.getValue() == true){
+                        System.out.println(eachEntry.getValue().get("brand") +"  " +eachEntry.getValue().get("model"));
+                    }
+                }
+            }
+        }
+
+
+        // Extra practice // Display all the electric cars
+        var ref = new Object(){  // var can replace almost any data type
+            String result = "";
+        };
+
+        myCars.forEach((key, value) -> {
+
+            value.forEach((k,v)-> {
+                if (k.equals("electric")){
+                    if ((Boolean)v == true){
+                       ref.result += value.get("brand")+" "+ value.get("model");
+
+                    }
+                }
+            });
+        });
+        System.out.println(ref.result);
 
     }
 }
