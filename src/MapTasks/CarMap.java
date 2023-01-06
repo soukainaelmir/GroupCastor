@@ -98,7 +98,7 @@ public class CarMap {
 
                 if (each.getKey().equals("model") || each.getKey().equals("brand") || each.getKey().equals("price")) {
 
-                    result += each.getValue() + " ";
+                    result += each.getValue() + " : ";
                 }
             }
             System.out.println(result);
