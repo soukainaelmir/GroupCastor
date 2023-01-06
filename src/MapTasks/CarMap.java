@@ -1,8 +1,6 @@
 package MapTasks;
 
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CarMap {
 
@@ -58,7 +56,7 @@ public class CarMap {
         car6.put("price", 17000);
         car6.put("electric", false);
 
-        Map<Integer, Map<String, Object>> myCars = new LinkedHashMap<>();
+        Map<Integer, Map<String, Object>> myCars = new Hashtable<>();
         myCars.put(1, car1);
         myCars.put(2, car2);
         myCars.put(3, car3);
@@ -92,13 +90,20 @@ public class CarMap {
 
         // 4.2 Display the brand-model-price of each car
         // Im still strugling with this task
-        for(Map.Entry<Integer, Map<String,Object>> eachEntry: myCars.entrySet()){
+
+        for (Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet()) {
+
+            String result = "";
             for (Map.Entry<String, Object> each : eachEntry.getValue().entrySet()) {
 
+                if (each.getKey().equals("model") || each.getKey().equals("brand") || each.getKey().equals("price")) {
+
+                    result += each.getValue() + " ";
+                }
             }
+            System.out.println(result);
+
         }
-
-
 
     }
 }
