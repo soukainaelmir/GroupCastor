@@ -14,8 +14,8 @@ public class ReverseNegativeNums {
 
 
         for (int i = 0; i < 10; i++) {
-            int nums = -100+ random.nextInt((150) );
-            System.out.println(nums + " : " +reverseNegativeNumbers(nums));
+            int numbers = -100+ random.nextInt((150) );
+            System.out.println(numbers + " --> " + reverseNegativeNumbers(numbers));
         }
 
     }
