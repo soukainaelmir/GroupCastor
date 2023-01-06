@@ -136,6 +136,25 @@ public class CarMap {
         });
         System.out.println(ref.result);
 
+        System.out.println("-------------------4.4 Display the most expensive car-----------------------");
+
+        var var = new Object(){
+            Integer max = (Integer) myCars.get(1).get("price");;
+            String result = "";
+        };
+
+        //Integer max = (Integer) myCars.get(1).get("price");
+
+        myCars.forEach((key, value) -> {
+            if ((Integer)value.get("price") > var.max){
+                var.max = (Integer) value.get("price");
+                var.result = value.get("brand") + " "+ value.get("model");
+
+            }
+        });
+        System.out.println(var.result);
+
+
     }
 }
 /*
