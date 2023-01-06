@@ -64,100 +64,55 @@ public class CarMap {
         myCars.put(4, car4);
         myCars.put(5, car5);
         myCars.put(6, car6);
-/*
-        myCars.forEach((k, v) -> {
-            for (Map.Entry<String, Object> each : v.entrySet()) {
-
-                boolean b = each.getKey().equals("brand");
-                boolean m = each.getKey().equals("model");
-                boolean p = each.getKey().equals("price");
-
-                if (b) {
-                    System.out.print(each.getValue() + " : ");
-                }
-                if (p) {
-                    System.out.print(each.getValue() + " : ");
-                }
-                if (m) {
-                    System.out.print(each.getValue() + " : ");
-                }
-
-                System.out.println(each.getKey());
-            }
-        });
-
- */
 
 
         System.out.println("------------Display the brand-model-price of each car-------------");
         // Im still struggling with this task
 
         for (Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet()) {
+            System.out.println(eachEntry.getValue().get("brand") + "-" + eachEntry.getValue().get("model") + "-" + eachEntry.getValue().get("price"));
 
-            String result = "";
-            for (Map.Entry<String, Object> each : eachEntry.getValue().entrySet()) {
-
-                if (each.getKey().equals("model") || each.getKey().equals("brand") || each.getKey().equals("price")) {
-
-                    result += each.getValue() + " : ";
-                }
-            }
-            System.out.println(result);
         }
 
         System.out.println("----------Display all the electric cars--------------");
 
         for (Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet()) {
-            for (Map.Entry<String, Object> each : eachEntry.getValue().entrySet()) {
-                if(each.getKey().equals("electric")){
-                    if ((Boolean) each.getValue() == true){
-                        System.out.println(eachEntry.getValue().get("brand") +"  " +eachEntry.getValue().get("model"));
-                    }
-                }
+            if ((Boolean) eachEntry.getValue().get("electric")) {
+                System.out.println(eachEntry.getValue().get("brand") + "  " + eachEntry.getValue().get("model"));
             }
         }
 
 
         // Extra practice // Display all the electric cars
-        var ref = new Object(){  // var can replace almost any data type
-            String result = "";
-        };
 
         myCars.forEach((key, value) -> {
-
-            value.forEach((k,v)-> {
-                if (k.equals("electric")){
-                    if ((Boolean)v == true){
-                       ref.result += value.get("brand")+" "+ value.get("model");
-
-                    }
-                }
-            });
+            if ((Boolean) value.get("electric")) {
+                System.out.println(value.get("brand") + "  " + value.get("model"));
+            }
         });
-        System.out.println(ref.result);
+
 
         System.out.println("-------------------4.4 Display the most expensive car-----------------------");
 
-        var var = new Object(){
-            Integer max = (Integer) myCars.get(1).get("price");;
+        var var = new Object() {
+            Integer max = (Integer) myCars.get(1).get("price");
             String result = "";
         };
 
-        //Integer max = (Integer) myCars.get(1).get("price");
-
-        myCars.forEach((key, value) -> {
-            if ((Integer)value.get("price") > var.max){
-                var.max = (Integer) value.get("price");
-                var.result = value.get("brand") + " "+ value.get("model");
-
+        myCars.forEach((k, v) -> {
+            if ((Integer)v.get("price") > var.max){
+                var.max = (Integer)v.get("price");
+                var.result = v.get("brand") +" "+ v.get("model");
             }
         });
-        System.out.println(var.result);
+        System.out.println("The Most excpensive car in this list is:\n"+var.result);
 
 
     }
 }
-/*
+
+
+      /*
  (Create 3 more map objects and store 3 different car informations in them)
 
         4.1 Create a map named myCars that takes car number as a key and car info as a value
