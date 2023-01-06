@@ -1,0 +1,174 @@
+1. Create a map that can contain the student name (String) and student scores (int[]) as a pair (Assume that each student has 5 scores and make the student name unique)
+		1.1 add at least 5 pairs into the map
+		1.2 Write a program that can display each student name and scores
+
+
+2. Given following map that contains employee name and employee salary:
+	 Map<String, Integer> map = new LinkedHashMap<>();
+        map.put("John", 123000);
+        map.put("Antony", 100000);
+        map.put("Jimmy", 115000);
+        map.put("Jalil", 145000);
+        map.put("James", 110000);
+        map.put("Conor", 85000);
+        map.put("Josh", 117000);
+        map.put("Cory", 118000);
+        map.put("Anderson",125000);
+        map.put("Steven", 135000);
+
+    2.1 who has the maximum and minimum salary?
+
+    2.2 how many employees has the salary between 120k ~ 150K?
+
+    2.3 display the names of the employees who are making less than 118k?
+
+    2.4 increase the salary employee by 10K if the current salary of employee is less than 120K
+
+3.  Given the following map that contains the names and hired date of employees:
+         Map<String, LocalDate> map = new LinkedHashMap<>();
+            map.put("John", LocalDate.of(2018, 9, 5));
+            map.put("Antony", LocalDate.of(2012, 7, 29));
+            map.put("Jimmy", LocalDate.of(2014, 4, 1));
+            map.put("James", LocalDate.of(2016, 11, 2));
+            map.put("Josh", LocalDate.of(2020, 5, 15));
+            map.put("Cory", LocalDate.of(2015, 6, 19));
+            map.put("Anderson", LocalDate.of(2013, 8, 24));
+            map.put("Steven", LocalDate.of(2017, 10, 2));
+
+        3.1 Display the names of the employee who were hired before 2015
+                    Hint: You can use isBefore method of LocalDate
+
+        3.2 Display the name of the employee who were hired on 5/15/2020
+                    Hint: You can use isEqual method of LocalDate
+
+        3.3 How many people were hired after 2014?
+                    Hint: You can use isAfter method of LocalDate
+
+        3.4 Display the name and hire date of the employee
+
+4. Given the following arrays that contains the names of the students from each group:
+	        String[] group1 = {};
+	        String[] group2 = {};
+	        String[] group3 = {};
+	        String[] group4 = {};
+	        String[] group5 = {};
+
+	    4.1 Create a map that contains group id and names of group members
+
+	            Map<Integer, String[]> groups = new LinkedHashMap();
+
+	        add all the group 1d and group members into the map named groups
+
+	    4.2 Display the names of each student with group id of 1
+
+	    4.3 Display the names of each student from each groups
+
+
+3. Given the following lists that contains the names of the students from each group:
+		List<String> group1 = new ArrayList<>(Arrays.asList( "Duygu","Magda","Farangez","Edison","Kerem","Farangis" ));
+
+        List<String> group2 = new ArrayList<>(Arrays.asList( "Margie","Vesele","Iryn","Nilufar","Aziza","Nurcan","Raika","Igor","Elif","Sana","Azamat" ));
+
+        List<String> group9 = new ArrayList<>(Arrays.asList( "Alex","Ali","Andriy","Cassandra","Sevgul","Olha","Tito","Ozan","Serkan","Furkan","Madina","Muharrem" ));
+
+        List<String> group24 = new ArrayList<>(Arrays.asList( "Maria","Kristina","Amin","George","Layan","Amin","Yulia","George","Ayanle","Maxim","Nermin","Doughlas" ));
+
+        List<String> group5 = new ArrayList<>(Arrays.asList("Nazar","Veronika","Mikael","Layla","Badmaa","Zaeir","Anna","Tamara","Eugene" ));
+
+
+        3.1 Create map that has integer as keys and List of Strings as values.
+        	add the group number and students name of that group as a pair to the map
+
+    	3.2 Write a program that can display student names of the each group in 5 separate lines
+
+
+4. Given the following maps that contains the different car informations:
+
+		 Map<String, Object> car1 = new Hashtable<>();
+	        car1.put("brand", "BMW");
+	        car1.put("model", "X5");
+	        car1.put("color", "Red");
+	        car1.put("year", 2021);
+	        car1.put("price", 55000);
+	        car1.put("electric", false);
+
+        Map<String, Object> car2 = new Hashtable<>();
+	        car2.put("brand", "Audi");
+	        car2.put("model", "Q7");
+	        car2.put("color", "Gray");
+	        car2.put("year", 2022);
+	        car2.put("price", 50000);
+	        car2.put("electric", false);
+
+        Map<String, Object> car3 = new Hashtable<>();
+	        car3.put("brand", "Tesla");
+	        car3.put("model", "Model Y");
+	        car3.put("color", "White");
+	        car3.put("year", 2020);
+	        car3.put("price", 60000);
+	        car3.put("electric", true);
+
+        (Create 3 more map objects and store 3 different car informations in them)
+
+        4.1 Create a map named myCars that takes car number as a key and car info as a value
+        		Hint: key of the map need to be integer and value of the map need to be a map with String as key and Object as value
+
+		4.2 Display the brand-model-price of each car
+
+		4.3 Display all the electric cars
+
+		4.4 Display the most expensive car
+
+
+5. 	Given the following maps that contains the Java topics of each unit and the amount of hours that we spend on it:
+		Map<String, Double> unit1 = new LinkedHashMap<>();
+	        unit1.put("Print Statements", 4.0);
+	        unit1.put("Escape Sequences", 2.0);
+	        unit1.put("Primitives", 4.0);
+	        unit1.put("Operators", 6.0);
+	        unit1.put("If Statements", 9.0);
+	        unit1.put("Switch Statement", 4.0);
+	        unit1.put("Scanner", 6.0);
+
+        Map<String, Double> unit2 = new LinkedHashMap<>();
+	        unit2.put("String Manipulation", 12.0);
+	        unit2.put("Loops", 17.5);
+	        unit2.put("Branching Statements", 1.5);
+	        unit2.put("Arrays", 14.5);
+	        unit2.put("Custom Methods", 16.5);
+	        unit2.put("Wrapper Classes", 3.0);
+	        unit2.put("Scanner", 6.0);
+
+        Map<String, Double> unit3 = new LinkedHashMap<>();
+	        unit3.put("Custom Methods", 16.5);
+	        unit3.put("Wrapper Classes", 3.0);
+	        unit3.put("ArrayList", 11.5);
+
+	        Map<String, Double> unit4 = new LinkedHashMap<>();
+	        unit4.put("Custom Class", 23.5);
+	        unit4.put("Access Modifiers", 2.5);
+
+        Map<String, Double> unit5 = new LinkedHashMap<>();
+	        unit5.put("OOP Encapsulation", 4.5);
+	        unit5.put("OOP Inheritance", 13.5);
+	        unit5.put("Final keyword", 2.5);
+	        unit5.put("Exceptions", 8.5);
+
+        Map<String, Double> unit6 = new LinkedHashMap<>();
+	        unit6.put("OOP Abstraction", 9.5);
+	        unit6.put("OOP Polymorphism", 7.5);
+	        unit6.put("Collection", 9.5);
+	        unit6.put("Map", 7.5);
+
+
+        5.1 Create a List and store all the map objects given in above
+
+        5.2 Display each Java topic and its hours on the console
+
+        5.3 Display the names of the java topics that we spend more than 7 hours
+
+        5.4 Display the names of the java topics that we spend less than 3 hours
+
+        5.5 Which Java Topic has the maximum hours?
+
+        5.6 Which topic has the minimum hours?
