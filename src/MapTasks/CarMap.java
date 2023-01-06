@@ -105,7 +105,7 @@ public class CarMap {
                 var.result = v.get("brand") +" "+ v.get("model");
             }
         });
-        System.out.println("The Most excpensive car in this list is:\n"+var.result);
+        System.out.println("The Most expensive car in this list is:\n"+var.result);
 
 
     }
